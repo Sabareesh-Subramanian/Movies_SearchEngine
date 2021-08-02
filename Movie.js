@@ -6,8 +6,9 @@ GetMovieDetails = () => {
 };
 
 async function SearchResults(movieName) {
+  let apikey = ""; // Enter your omdb api key here
   let res1 = await fetch(
-    `http://www.omdbapi.com/?t=${movieName}&apikey=95dfc800`
+    `http://www.omdbapi.com/?t=${movieName}&apikey=${apikey}`
   );
   let res2 = await res1.json();
   LoadResults(res2);
